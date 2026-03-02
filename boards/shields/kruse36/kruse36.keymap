@@ -6,7 +6,114 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt {
+    //  flavor = "tap-preferred";
+    // tapping_term_ms = <200>;
+};
+
+&lt { require-prior-idle-ms = <120>; };
+
 / {
+        macros {
+        // sometimes my device thinks a modifier is being held down
+        // pressing all modifiers fixes it.
+
+        unstick: unstick {
+            label = "ZM_unstick";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+        };
+
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp TAB>;
+            label = "ALT_TAB";
+        };
+
+        win_tab: win_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp TAB>;
+            label = "WIN_TAB";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        // both right thumb keys
+        // internal-left & external-right thumb keys
+
+        escape {
+            timeout-ms = <200>;
+            key-positions = <33 30>;
+            bindings = <&kp ESCAPE>;
+        };
+
+        // both left thumb keys
+
+        combo_settings {
+            timeout-ms = <300>;
+            key-positions = <30 31>;
+            bindings = <&mo 7>;
+        };
+
+        homeLayer {
+            bindings = <&to 0>;
+            key-positions = <16 13>;
+            timeout-ms = <200>;
+        };
+
+        navLayer {
+            bindings = <&to 1>;
+            key-positions = <31 32>;
+            timeout-ms = <200>;
+        };
+
+        quick_del {
+            bindings = <&kp DEL>;
+            key-positions = <13 31>;
+        };
+    };
+
+    behaviors {
+        longPress: longPress {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONGPRESS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <360>;
+        };
+
+        HMR: HMR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            hold-trigger-key-positions = <0 1 2 11 12 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;
+            require-prior-idle-ms = <120>;
+        };
+
+        HML: HML {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
+            require-prior-idle-ms = <120>;
+        };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
