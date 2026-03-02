@@ -2,9 +2,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // default: 10
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     //  flavor = "tap-preferred";
@@ -14,7 +12,7 @@
 &lt { require-prior-idle-ms = <120>; };
 
 / {
-        macros {
+    macros {
         // sometimes my device thinks a modifier is being held down
         // pressing all modifiers fixes it.
 
@@ -113,16 +111,79 @@
             require-prior-idle-ms = <120>;
         };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y    &kp U  &kp I  &kp O  &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G  &kp H    &kp J  &kp K  &kp L  &kp SEMI
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp N    &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&none  &none  &none &kp TAB &kp BACKSPACE   &kp SPACE  &kp ENTER  &none  &none  &none
+  &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y    &kp U          &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F  &kp G    &kp H    &kp J          &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N    &kp M          &kp COMMA  &kp DOT  &kp SLASH
+                &none  &none  &none    &kp TAB  &kp BACKSPACE  &kp SPACE
+            >;
+        };
+
+        nav {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        numbers {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        function {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        media {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
