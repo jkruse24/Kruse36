@@ -11,8 +11,6 @@
     // tapping_term_ms = <200>;
 };
 
-//&lt { require-prior-idle-ms = <120>; };
-
 / {
     matrix_transform0: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
