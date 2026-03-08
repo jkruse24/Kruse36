@@ -1,0 +1,47 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    kruse36_layout: kruse36_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Kruse36";
+
+        keys  //                     w    h     x     y    rot    rx    ry
+            = <&key_physical_attrs 100  100     0    37      0     0     0>  /* L row0 pinky */
+            , <&key_physical_attrs 100  100   100    12      0     0     0>  /* L row0 ring */
+            , <&key_physical_attrs 100  100   200     0      0     0     0>  /* L row0 middle */
+            , <&key_physical_attrs 100  100   300    12      0     0     0>  /* L row0 index */
+            , <&key_physical_attrs 100  100   400    25      0     0     0>  /* L row0 inner */
+            , <&key_physical_attrs 100  100   800    25      0     0     0>  /* R row0 inner */
+            , <&key_physical_attrs 100  100   900    12      0     0     0>  /* R row0 index */
+            , <&key_physical_attrs 100  100  1000     0      0     0     0>  /* R row0 middle */
+            , <&key_physical_attrs 100  100  1100    12      0     0     0>  /* R row0 ring */
+            , <&key_physical_attrs 100  100  1200    37      0     0     0>  /* R row0 pinky */
+            , <&key_physical_attrs 100  100     0   137      0     0     0>  /* L row1 pinky */
+            , <&key_physical_attrs 100  100   100   112      0     0     0>  /* L row1 ring */
+            , <&key_physical_attrs 100  100   200   100      0     0     0>  /* L row1 middle */
+            , <&key_physical_attrs 100  100   300   112      0     0     0>  /* L row1 index */
+            , <&key_physical_attrs 100  100   400   125      0     0     0>  /* L row1 inner */
+            , <&key_physical_attrs 100  100   800   125      0     0     0>  /* R row1 inner */
+            , <&key_physical_attrs 100  100   900   112      0     0     0>  /* R row1 index */
+            , <&key_physical_attrs 100  100  1000   100      0     0     0>  /* R row1 middle */
+            , <&key_physical_attrs 100  100  1100   112      0     0     0>  /* R row1 ring */
+            , <&key_physical_attrs 100  100  1200   137      0     0     0>  /* R row1 pinky */
+            , <&key_physical_attrs 100  100     0   237      0     0     0>  /* L row2 pinky */
+            , <&key_physical_attrs 100  100   100   212      0     0     0>  /* L row2 ring */
+            , <&key_physical_attrs 100  100   200   200      0     0     0>  /* L row2 middle */
+            , <&key_physical_attrs 100  100   300   212      0     0     0>  /* L row2 index */
+            , <&key_physical_attrs 100  100   400   225      0     0     0>  /* L row2 inner */
+            , <&key_physical_attrs 100  100   800   225      0     0     0>  /* R row2 inner */
+            , <&key_physical_attrs 100  100   900   212      0     0     0>  /* R row2 index */
+            , <&key_physical_attrs 100  100  1000   200      0     0     0>  /* R row2 middle */
+            , <&key_physical_attrs 100  100  1100   212      0     0     0>  /* R row2 ring */
+            , <&key_physical_attrs 100  100  1200   237      0     0     0>  /* R row2 pinky */
+            , <&key_physical_attrs 100  100   225   325      0     0     0>  /* L thumb inner */
+            , <&key_physical_attrs 100  100   300   325    500   298   789>  /* L thumb mid */
+            , <&key_physical_attrs 100  100   375   325   1000   298   789>  /* L thumb outer */
+            , <&key_physical_attrs 100  100   825   325 (-1000) 1002   789>  /* R thumb outer */
+            , <&key_physical_attrs 100  100   900   325  (-500) 1002   789>  /* R thumb mid */
+            , <&key_physical_attrs 100  100   975   325      0     0     0>  /* R thumb inner */
+            ;
+    };
+};
