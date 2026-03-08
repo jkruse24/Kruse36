@@ -45,13 +45,6 @@
 
         // both right thumb keys
         // internal-left & external-right thumb keys
-
-        escape {
-            timeout-ms = <200>;
-            key-positions = <33 30>;
-            bindings = <&kp ESCAPE>;
-        };
-
         // both left thumb keys
 
         combo_settings {
@@ -68,18 +61,24 @@
 
         navLayer {
             bindings = <&to 1>;
-            key-positions = <31 32>;
+            key-positions = <31 34>;
             timeout-ms = <200>;
         };
 
-        quick_del {
-            bindings = <&kp DEL>;
+        mouseLayer {
+            bindings = <&to 5>;
             key-positions = <13 31>;
         };
 
         settings2 {
             bindings = <&mo 7>;
             key-positions = <35 34>;
+        };
+
+        home2 {
+            bindings = <&to 0>;
+            key-positions = <13 32>;
+            timeout-ms = <200>;
         };
     };
 
@@ -124,10 +123,10 @@
 
         base {
             bindings = <
-  &kp Q               &longPress LEFT_WIN W  &kp E               &lt 4 R             &kp T              &kp Y        &kp U         &kp I             &kp O             &kp P
-  &HML LSHFT A        &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G            &kp H        &HMR RCTRL J  &HMR RIGHT_ALT K  &HMR RIGHT_GUI L  &HMR RIGHT_SHIFT SEMI
-  &longPress LS(Z) Z  &longPress LC(X) X     &longPress LC(C) C  &longPress LC(V) V  &kp B              &kp N        &kp M         &kp COMMA         &kp DOT           &kp SLASH
-                                             &kp ESCAPE          &lt 6 TAB           &lt 5 BACKSPACE    &lt 3 ENTER  &kp SPACE     &kp DEL
+  &kp Q               &longPress LEFT_WIN W  &kp E               &lt 4 R             &kp T        &kp Y        &kp U         &kp I             &kp O             &kp P
+  &HML LSHFT A        &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G      &kp H        &HMR RCTRL J  &HMR RIGHT_ALT K  &HMR RIGHT_GUI L  &HMR RIGHT_SHIFT SEMI
+  &longPress LS(Z) Z  &longPress LC(X) X     &longPress LC(C) C  &longPress LC(V) V  &kp B        &kp N        &kp M         &kp COMMA         &kp DOT           &kp SLASH
+                                             &lt 1 ESCAPE        &lt 5 BACKSPACE     &lt 6 TAB    &lt 3 ENTER  &kp SPACE     &kp DEL
             >;
         };
 
@@ -169,10 +168,10 @@
 
         mouse {
             bindings = <
-  &none           &none      &none   &mkp MCLK  &none     &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none
-  &kp LEFT_SHIFT  &mkp RCLK  &none   &mkp LCLK  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-  &none           &none      &none   &none      &none     &none   &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none
-                             &trans  &trans     &trans    &trans  &trans          &trans
+  &none           &none      &none      &msc SCRL_UP    &none     &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none
+  &kp LEFT_SHIFT  &mkp RCLK  &mkp MCLK  &mkp LCLK       &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+  &none           &none      &none      &msc SCRL_DOWN  &none     &none   &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none
+                             &trans     &kp LCTRL       &trans    &trans  &trans          &trans
             >;
         };
 
