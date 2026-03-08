@@ -168,10 +168,10 @@
 
         mouse {
             bindings = <
-  &none           &none      &none      &msc SCRL_UP    &none     &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none
-  &kp LEFT_SHIFT  &mkp RCLK  &mkp MCLK  &mkp LCLK       &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+  &none           &none      &mkp MCLK  &msc SCRL_UP    &none     &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none
+  &kp LEFT_SHIFT  &kp LCTRL  &mkp RCLK  &mkp LCLK       &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
   &none           &none      &none      &msc SCRL_DOWN  &none     &none   &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none
-                             &trans     &kp LCTRL       &trans    &trans  &trans          &trans
+                             &trans     &none           &trans    &trans  &trans          &trans
             >;
         };
 
