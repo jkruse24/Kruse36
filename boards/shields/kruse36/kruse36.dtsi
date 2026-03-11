@@ -27,6 +27,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         status = "okay";
         diode-direction = "col2row";
+        wakeup-source;
 
         row-gpios = <
             &gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN) /* Row 0 - Top */
