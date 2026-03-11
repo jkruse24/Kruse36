@@ -87,6 +87,26 @@
             timeout-ms = <200>;
             require-prior-idle-ms = <150>;
         };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <20 21>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <21 22>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <22 23>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <23 24>;
+        };
     };
 
     behaviors {
@@ -97,7 +117,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <360>;
+            tapping-term-ms = <250>;
+            require-prior-idle-ms = <200>;
         };
 
         HMR: HMR {
@@ -139,10 +160,10 @@
 
         nav {
             bindings = <
-  &trans     &trans    &trans    &trans     &trans         &none         &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &none
-  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &kp LG(TAB)    &kp HOME      &kp LEFT   &kp DOWN      &kp RIGHT  &HMR RIGHT_SHIFT END
-  &trans     &trans    &trans    &trans     &trans         &kp LC(BSPC)  &kp BSPC   &none         &none      &none
-                       &trans    &trans     &trans         &trans        &trans     &trans
+  &trans     &trans    &trans    &trans     &trans         &none         &kp PG_UP     &kp UP_ARROW  &kp PG_DN      &none
+  &kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &kp LG(TAB)    &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT      &HMR RIGHT_SHIFT END
+  &trans     &trans    &trans    &trans     &trans         &kp LC(BSPC)  &kp LC(LEFT)  &none         &kp LC(RIGHT)  &none
+                       &trans    &trans     &trans         &trans        &trans        &trans
             >;
         };
 
