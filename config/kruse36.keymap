@@ -44,6 +44,13 @@
             bindings = <&kp LGUI &kp TAB>;
             label = "WIN_TAB";
         };
+
+        hyper: hyper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_WIN &kp LEFT_SHIFT &kp LEFT_ALT>;
+            label = "HYPER";
+        };
     };
 
     combos {
@@ -135,6 +142,17 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             require-prior-idle-ms = <120>;
         };
+
+        ht_hyper: ht_hyper {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_HYPER";
+            bindings = <&hyper>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            require-prior-idle-ms = <120>;
+        };
     };
 
     keymap {
@@ -142,10 +160,10 @@
 
         base {
             bindings = <
-  &kp Q               &longPress LEFT_WIN W  &kp E               &lt 4 R             &kp T        &kp Y                  &kp U         &kp I             &kp O             &kp P
-  &HML LSHFT A        &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G      &kp H                  &HMR RCTRL J  &HMR RIGHT_ALT K  &HMR RIGHT_GUI L  &HMR RIGHT_SHIFT SEMI
-  &longPress LS(Z) Z  &longPress LC(X) X     &longPress LC(C) C  &longPress LC(V) V  &kp B        &kp N                  &kp M         &kp COMMA         &kp DOT           &kp SLASH
-                                             &lt 5 ESCAPE        &lt 1 BACKSPACE     &lt 6 TAB    &HMR LEFT_SHIFT ENTER  &lt 3 SPACE   &kp DEL
+  &kp Q               &longPress LEFT_WIN W  &kp E               &lt 4 R             &kp T        &kp Y                  &kp U         &kp I               &kp O             &kp P
+  &HML LSHFT A        &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G      &kp H                  &HMR RCTRL J  &HMR RIGHT_ALT K    &HMR RIGHT_GUI L  &HMR RIGHT_SHIFT SEMI
+  &longPress LS(Z) Z  &longPress LC(X) X     &longPress LC(C) C  &longPress LC(V) V  &kp B        &kp N                  &kp M         &kp COMMA           &kp DOT           &kp SLASH
+                                             &lt 5 ESCAPE        &lt 1 BACKSPACE     &lt 6 TAB    &HMR LEFT_SHIFT ENTER  &lt 3 SPACE   &ht_hyper 0 DELETE
             >;
         };
 
