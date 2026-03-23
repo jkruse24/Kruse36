@@ -79,9 +79,9 @@
             require-prior-idle-ms = <150>;
         };
 
-        home2 {
-            bindings = <&to 0>;
-            key-positions = <13 32>;
+        click {
+            bindings = <&mkp MB1>;
+            key-positions = <13 31>;
             timeout-ms = <200>;
             require-prior-idle-ms = <150>;
         };
