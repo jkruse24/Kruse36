@@ -15,7 +15,7 @@
 
 &mmv {
     delay-ms = <0>;
-    time-to-max-speed-ms = <150>;
+    time-to-max-speed-ms = <165>;
     trigger-period-ms = <8>;
 };
 
@@ -48,9 +48,13 @@
         hyper: hyper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &kp LEFT_WIN &kp LEFT_SHIFT &kp LEFT_ALT>
-        , <&macro_pause_for_release>
-        , <&macro_release &kp LCTRL &kp LEFT_WIN &kp LEFT_SHIFT &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_WIN &kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &kp LEFT_WIN &kp LEFT_SHIFT &kp LEFT_ALT>;
+
             label = "HYPER";
         };
     };
