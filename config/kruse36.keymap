@@ -191,7 +191,7 @@
         base {
             bindings = <
   &kp Q               &longPress LEFT_WIN W  &kp E               &lt 4 R             &kp T        &kp Y                  &kp U         &kp I             &kp O             &kp P
-  &lt 8 A             &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G      &kp H                  &HMR RCTRL J  &HMR RIGHT_ALT K  &HMR RIGHT_GUI L  &lt 8 SEMI
+  &HML LSHIFT A       &HML LEFT_GUI S        &HML LEFT_ALT D     &HML LCTRL F        &lt 2 G      &kp H                  &HMR RCTRL J  &HMR RIGHT_ALT K  &HMR RIGHT_GUI L  &HMR RSHFT SEMI
   &longPress LS(Z) Z  &longPress LC(X) X     &longPress LC(C) C  &longPress LC(V) V  &kp B        &kp N                  &kp M         &kp COMMA         &kp DOT           &kp SLASH
                                              &lt 5 ESCAPE        &lt 1 BACKSPACE     &lt 6 TAB    &HMR LEFT_SHIFT ENTER  &lt 3 SPACE   &ht_meh 0 DELETE
             >;
